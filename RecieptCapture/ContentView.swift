@@ -11,34 +11,16 @@ import SwiftData
 
 struct ReceiptCaptureApp: View {
     @State private var image: UIImage? = nil
-    //@State private var recognizedText = ""
-    //@State private var categories: [String] = []
-//    @StateObject var imageModelContainer = modelContainer(for: ImageData(), inMemory: true, onSetup: (Result<ImageModelContainer), Error)
-    @StateObject var imageModelContainer = ImageModelContainer()
-
+    
     var body: some View {
         NavigationView {
             VStack {
-                if !imageModelContainer.isEmpty {
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(imageModelContainer.imageItems, id: \.id) { item in
-                                Image(uiImage: UIImage(data: item.imageData) ?? UIImage())
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 200, height: 200)
-                                    .padding()
-                            }
-                        }
-                    }
-                }
-                
                 Text("Scan Image or Upload library")
-                     .onAppear {
-                        imageModelContainer.fetchImageData()
+                    .onAppear {
+                        
                     }
                     .font(.headline)
-                //.fontWeight(.bold)
+                  //.fontWeight(.bold)
                     .foregroundColor(.white)
                     .background(Color.blue) //
                     .navigationTitle("Reciept Capture")
