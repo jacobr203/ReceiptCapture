@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7A77287B-4530-48DD-9869-9DEE5331683E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "959C716C-328B-4049-A138-AF084CE2A79D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecieptCapture/Database/ImageModelContainer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchImageData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "959C716C-328B-4049-A138-AF084CE2A79D - 499e31aeccbc72f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.ImageModelContainer.fetchImageData() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/Database/ImageModelContainer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "959C716C-328B-4049-A138-AF084CE2A79D - 499e31aeccbc72f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.ImageModelContainer.fetchImageData() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/Database/ImageModelContainer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F9C3FD1-1668-4027-8442-86C72E7A6148"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecieptCapture/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1F9C3FD1-1668-4027-8442-86C72E7A6148 - ed95966ae3317368"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.ReceiptCaptureApp.body.getter : some"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "1F9C3FD1-1668-4027-8442-86C72E7A6148 - a5b5d6aad7833590"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.LazyVStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;RecieptCapture.ImageData&gt;, Foundation.UUID, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0)&gt;&gt; in RecieptCapture.ReceiptCaptureApp.body.getter : some"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
