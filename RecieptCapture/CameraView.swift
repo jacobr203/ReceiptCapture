@@ -11,7 +11,8 @@ import AVFoundation
 
 struct CameraView: View {
     @State private var isShowingImagePicker = false
-    @State private var image: UIImage? = nil
+    @Binding var image: UIImage?
+    @Binding var isShown: Bool
     @State private var isCameraAuthorized = false
     @State private var isLive = ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"]?.isEmpty
     

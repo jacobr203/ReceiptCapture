@@ -49,6 +49,36 @@
                   endingLineNumber = "17"
                   offsetFromSymbolStart = "536">
                </Location>
+               <Location
+                  uuid = "959C716C-328B-4049-A138-AF084CE2A79D - 499e31aeccbc72f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.ImageModelContainer.fetchImageData() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/Database/ImageModelContainer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "959C716C-328B-4049-A138-AF084CE2A79D - 499e31aeccbc72f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.ImageModelContainer.fetchImageData() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/Database/ImageModelContainer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "560">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

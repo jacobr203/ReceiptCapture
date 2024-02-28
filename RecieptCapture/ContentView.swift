@@ -11,16 +11,21 @@ import SwiftData
 
 struct ReceiptCaptureApp: View {
     @State private var image: UIImage? = nil
-    
+    @State private var isShown: Bool = false
     var body: some View {
         NavigationView {
             VStack {
+                if let image = image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                }
                 Text("Scan Image or Upload library")
                     .onAppear {
                         
                     }
                     .font(.headline)
-                  //.fontWeight(.bold)
+                //.fontWeight(.bold)
                     .foregroundColor(.white)
                     .background(Color.blue) //
                     .navigationTitle("Reciept Capture")
@@ -29,7 +34,7 @@ struct ReceiptCaptureApp: View {
                         RoundedRectangle(cornerRadius: 10) // Overlay a rounded rectangle to add border
                             .stroke(Color.blue, lineWidth: 2) // Set border color and width
                     )
-                NavigationLink(destination:  CameraView()) {
+                NavigationLink(destination:  CameraView(image: $image, isShown: $isShown)) {
                     Text("Take Picture")
                 }
                 
