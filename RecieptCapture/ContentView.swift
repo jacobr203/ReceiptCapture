@@ -11,11 +11,31 @@ import UIKit
 struct ReceiptCaptureApp: View {
     @State private var isShown: Bool = false
     @StateObject var imageViewModel = ImageViewModel()
+    @State private var showPicker = false
+    @State var selectedImages: [UIImage] = []
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Images")
+                Button("Select Photos") {
+                    showPicker.toggle()
+                }
+                .sheet(isPresented: $showPicker) {
+                    PhotoPickerView(showPicker: $showPicker, selectedImages: $selectedImages)
+                }
+                
+                if !selectedImages.isEmpty {
+                    Text("Selected Photos:")
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(selectedImages, id: \.self) { image in
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                            }
+                        }
+                    }
+                }
                 List(imageViewModel.images) { imageData in
                     Image(uiImage: FileManager.default.loadImage(fromURL: imageData.imageURL)!)
                         .resizable()
@@ -48,26 +68,24 @@ struct ReceiptCaptureApp: View {
                     Text("Take Picture")
                 }
                 
-                
-                
             }
+            
         }
     }
-    
-    func recognizeText(from image: UIImage) {
-        // Use TesseractOCR to extract text from the image
-        // ...
-        // Update recognizedText state with extracted text
-    }
-    
-    func categorizeReceipt(text: String) {
-        // Use TensorFlow Lite model to categorize the receipt text
-        // ...
-        // Update categories state with predicted categories
-    }
-    
-    
 }
+
+func recognizeText(from image: UIImage) {
+    // Use TesseractOCR to extract text from the image
+    // ...
+    // Update recognizedText state with extracted text
+}
+
+func categorizeReceipt(text: String) {
+    // Use TensorFlow Lite model to categorize the receipt text
+    // ...
+    // Update categories state with predicted categories
+}
+
 
 #Preview {
     ReceiptCaptureApp()
