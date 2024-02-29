@@ -9,16 +9,27 @@ import SwiftUI
 import UIKit
 
 struct ReceiptCaptureApp: View {
-    @State private var image: UIImage? = nil
     @State private var isShown: Bool = false
+    @StateObject var imageViewModel = ImageViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
-                if let image = image {
-                    Image(uiImage: image)
+                Text("Images")
+                List(imageViewModel.images) { imageData in
+                    Image(uiImage: FileManager.default.loadImage(fromURL: imageData.imageURL)!)
                         .resizable()
-                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text(imageData.name)
                 }
+                .onAppear {
+                    if let imageURLs = try? FileManager.default.contentsOfDirectory(at: FileManager.documentsDirectory, includingPropertiesForKeys: nil) {
+                        for imageURL in imageURLs {
+                            let imageName = imageURL.lastPathComponent
+                            let imageData = ImageData(name: imageName, imageURL: imageURL, imageCategory: "None")
+                            imageViewModel.images.append(imageData)
+                        }
+                    }}
                 Text("Scan Image or Upload library")
                     .onAppear {
                         
@@ -33,7 +44,7 @@ struct ReceiptCaptureApp: View {
                         RoundedRectangle(cornerRadius: 10) // Overlay a rounded rectangle to add border
                             .stroke(Color.blue, lineWidth: 2) // Set border color and width
                     )
-                NavigationLink(destination:  CameraView(image: $image, isShown: $isShown)) {
+                NavigationLink(destination:  CameraView(isShown: $isShown)) {
                     Text("Take Picture")
                 }
                 

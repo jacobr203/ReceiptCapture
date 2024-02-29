@@ -11,7 +11,7 @@ import AVFoundation
 
 struct CameraView: View {
     @State private var isShowingImagePicker = false
-    @Binding var image: UIImage?
+    @State var image: UIImage?
     @Binding var isShown: Bool
     @State private var isCameraAuthorized = false
     @State private var isLive = ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"]?.isEmpty
@@ -30,6 +30,11 @@ struct CameraView: View {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
+                    let imageName = "ReceiptCapture"+UUID().uuidString
+                    if let imageURL = FileManager.default.saveImage(image, withName: imageName) {
+                        Text("Image saved successfully at \(imageURL)")
+                    }
+                    
                 } else {
                     Text("No Image Available")
                 }
@@ -74,4 +79,6 @@ struct CameraView: View {
             }
         }
     }
+
+
 }
