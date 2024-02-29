@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UIKit
-import SwiftData
 
 struct ReceiptCaptureApp: View {
     @State private var image: UIImage? = nil

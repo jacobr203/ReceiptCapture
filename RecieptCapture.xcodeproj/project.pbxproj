@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B11274B2B8BF71C005372C8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11274A2B8BF71C005372C8 /* CameraView.swift */; };
 		0B11274D2B8C2885005372C8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11274C2B8C2885005372C8 /* ImagePicker.swift */; };
+		0B3D09E52B9006E500449161 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D09E42B9006E500449161 /* FileManager.swift */; };
 		0B64CB702B8BC3F00089A87E /* RecieptCaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB6F2B8BC3F00089A87E /* RecieptCaptureApp.swift */; };
 		0B64CB722B8BC3F00089A87E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB712B8BC3F00089A87E /* ContentView.swift */; };
 		0B64CB742B8BC3F00089A87E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB732B8BC3F00089A87E /* Item.swift */; };
@@ -17,8 +18,6 @@
 		0B64CB832B8BC3F30089A87E /* RecieptCaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB822B8BC3F30089A87E /* RecieptCaptureTests.swift */; };
 		0B64CB8D2B8BC3F30089A87E /* RecieptCaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB8C2B8BC3F30089A87E /* RecieptCaptureUITests.swift */; };
 		0B64CB8F2B8BC3F30089A87E /* RecieptCaptureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB8E2B8BC3F30089A87E /* RecieptCaptureUITestsLaunchTests.swift */; };
-		0BBEA7402B8D2D9A004CA4DD /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBEA73F2B8D2D9A004CA4DD /* ImageData.swift */; };
-		0BBEA7462B8D3967004CA4DD /* ImageModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBEA7452B8D3967004CA4DD /* ImageModelContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0B11274A2B8BF71C005372C8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		0B11274C2B8C2885005372C8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0B3D09E42B9006E500449161 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		0B64CB6C2B8BC3F00089A87E /* RecieptCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecieptCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B64CB6F2B8BC3F00089A87E /* RecieptCaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptCaptureApp.swift; sourceTree = "<group>"; };
 		0B64CB712B8BC3F00089A87E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,8 +52,6 @@
 		0B64CB882B8BC3F30089A87E /* RecieptCaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecieptCaptureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B64CB8C2B8BC3F30089A87E /* RecieptCaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptCaptureUITests.swift; sourceTree = "<group>"; };
 		0B64CB8E2B8BC3F30089A87E /* RecieptCaptureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptCaptureUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0BBEA73F2B8D2D9A004CA4DD /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
-		0BBEA7452B8D3967004CA4DD /* ImageModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModelContainer.swift; sourceTree = "<group>"; };
 		0BBEA7472B8D43CB004CA4DD /* RecieptCaptureDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecieptCaptureDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,8 +144,7 @@
 		0BBEA73A2B8D06E5004CA4DD /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				0BBEA73F2B8D2D9A004CA4DD /* ImageData.swift */,
-				0BBEA7452B8D3967004CA4DD /* ImageModelContainer.swift */,
+				0B3D09E42B9006E500449161 /* FileManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -282,13 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BBEA7462B8D3967004CA4DD /* ImageModelContainer.swift in Sources */,
 				0B64CB722B8BC3F00089A87E /* ContentView.swift in Sources */,
 				0B64CB742B8BC3F00089A87E /* Item.swift in Sources */,
 				0B11274D2B8C2885005372C8 /* ImagePicker.swift in Sources */,
+				0B3D09E52B9006E500449161 /* FileManager.swift in Sources */,
 				0B64CB702B8BC3F00089A87E /* RecieptCaptureApp.swift in Sources */,
 				0B11274B2B8BF71C005372C8 /* CameraView.swift in Sources */,
-				0BBEA7402B8D2D9A004CA4DD /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
