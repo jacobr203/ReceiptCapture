@@ -21,7 +21,7 @@ struct CameraView: View {
         
         VStack {
             if isCameraAuthorized {
-                 if isLive == false, let image = UIImage(named: "testReceipt") {
+                if isLive == false, let image = UIImage(named: "testReceipt") {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -30,11 +30,6 @@ struct CameraView: View {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                    let imageName = "ReceiptCapture"+UUID().uuidString
-                    if let imageURL = FileManager.default.saveImage(image, withName: imageName) {
-                        Text("Image saved successfully at \(imageURL)")
-                    }
-                    
                 } else {
                     Text("No Image Available")
                 }
@@ -44,7 +39,7 @@ struct CameraView: View {
                 }
                 .padding()
                 .sheet(isPresented: $isShowingImagePicker) {
-                        ImagePicker(image: $image, isShown: $isShowingImagePicker)
+                    ImagePicker(image: $image, isShown: $isShowingImagePicker)
                     
                 }
             } else {
@@ -58,6 +53,9 @@ struct CameraView: View {
         }
         .onAppear {
             checkCameraPermission()
+        }
+        .onDisappear {
+            saveCleanExit()
         }
     }
     
@@ -79,6 +77,14 @@ struct CameraView: View {
             }
         }
     }
-
-
+    
+    private func saveCleanExit() {
+        //save the image if it exists, clean the view so the image doesn't persist, exit
+        if let image = image, isLive == true {
+            let imageName = "ReceiptCapture."+UUID().uuidString
+            FileManager.default.saveImage(image, withName: imageName) //Could probably remove the URL here...
+        }
+    }
+    
+    
 }

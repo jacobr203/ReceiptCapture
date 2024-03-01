@@ -9,50 +9,36 @@ import SwiftUI
 import UIKit
 
 struct ReceiptCaptureApp: View {
-    @State private var isShown: Bool = false
+    @State var isShown: Bool = false
     @StateObject var imageViewModel = ImageViewModel()
-    @State private var showPicker = false
+    @State var showPicker: Bool = false
     @State var selectedImages: [UIImage] = []
     
     var body: some View {
         NavigationView {
-            VStack {
-                Button("Select Photos") {
-                    showPicker.toggle()
-                }
-                .sheet(isPresented: $showPicker) {
-                    PhotoPickerView(showPicker: $showPicker, selectedImages: $selectedImages)
-                }
-                
-                if !selectedImages.isEmpty {
-                    Text("Selected Photos:")
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(selectedImages, id: \.self) { image in
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                            }
-                        }
+            VStack { //this is the Image Library from Photos
+                ShowLibrary(showPicker: $showPicker, selectedImages: $selectedImages)
+                    .onDisappear{
+                        saveCleanExit()
+                        //this is where you add the files to the directory and assign hash
                     }
-                }
+                //This is the image library saved onto the app
                 List(imageViewModel.images) { imageData in
                     Image(uiImage: FileManager.default.loadImage(fromURL: imageData.imageURL)!)
                         .resizable()
                         .frame(width: 100, height: 100)
-                    Text(imageData.name)
+                    //Text(imageData.name)
                 }
                 .onAppear {
                     if let imageURLs = try? FileManager.default.contentsOfDirectory(at: FileManager.documentsDirectory, includingPropertiesForKeys: nil) {
                         for imageURL in imageURLs {
                             let imageName = imageURL.lastPathComponent
-                            let imageData = ImageData(name: imageName, imageURL: imageURL, imageCategory: "None")
+                            let imageData = ImageData(name: imageName, imageURL: imageURL, hash: "123")
                             imageViewModel.images.append(imageData)
                         }
                     }}
                 Text("Scan Image or Upload library")
                     .onAppear {
-                        
                     }
                     .font(.headline)
                 //.fontWeight(.bold)
@@ -67,12 +53,20 @@ struct ReceiptCaptureApp: View {
                 NavigationLink(destination:  CameraView(isShown: $isShown)) {
                     Text("Take Picture")
                 }
-                
             }
-            
+        }
+    }
+    private func saveCleanExit() {
+        if selectedImages.count > 0 {
+            for image in selectedImages {
+                let imageName = "ReceiptCapture." + UUID().uuidString
+                FileManager.default.saveImage(image, withName: imageName)
+            }
         }
     }
 }
+
+
 
 func recognizeText(from image: UIImage) {
     // Use TesseractOCR to extract text from the image
@@ -87,7 +81,9 @@ func categorizeReceipt(text: String) {
 }
 
 
+
 #Preview {
+    
     ReceiptCaptureApp()
         .modelContainer(for: Item.self, inMemory: true)
 }
