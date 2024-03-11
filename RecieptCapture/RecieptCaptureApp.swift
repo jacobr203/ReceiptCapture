@@ -16,10 +16,10 @@ let dependencies = [
 // Entry point for the app
 
 @main
-struct ReceiptCaptureAppApp: App {
+struct ReceiptCaptureApp: App {
   var body: some Scene {
     WindowGroup {
-        ReceiptCaptureApp()
+        ContentView()
     }
   }
     

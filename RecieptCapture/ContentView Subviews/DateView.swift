@@ -21,7 +21,7 @@ struct DateView: View {
                 // Button action code to open model
             }) {
                 Image(systemName: strMenuIconName)
-                    .accentColor(.black)
+                    .accentColor(.white)
                     .frame(width:40, height: 30)
                     .padding(.leading, 30)
                     .font(.system(size: 20))
@@ -31,7 +31,7 @@ struct DateView: View {
                 dtmMonth = addMonth(forward: false)
             }) {
                 Image(systemName: strLeftArrow)
-                    .accentColor(.black)
+                    .accentColor(.white)
                     .frame(width:40, height: 30)
                     .font(.system(size: 20))
             }
@@ -43,7 +43,7 @@ struct DateView: View {
                 dtmMonth = addMonth(forward: true)
             }) {
                 Image(systemName: strRightArrow)
-                    .accentColor(.black)
+                    .accentColor(.white)
                     .frame(width:40, height: 30)
                     .font(.system(size: 20))
             }
@@ -52,7 +52,7 @@ struct DateView: View {
                 // Button action code to open model
             }) {
                 Image(systemName: strManualReciept)
-                    .accentColor(.black)
+                    .accentColor(.white)
                     .frame(width:40, height: 30)
                     .padding(.trailing, 30)
                     .font(.system(size: 20))

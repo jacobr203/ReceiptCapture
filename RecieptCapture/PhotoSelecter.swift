@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import SQLite3
 
 struct PhotoPickerView: UIViewControllerRepresentable {
     @Binding var showPicker: Bool
@@ -54,17 +55,32 @@ struct PhotoPickerView: UIViewControllerRepresentable {
 }
 
 struct ShowLibrary: View {
-    @Binding var showPicker: Bool
-    @Binding var selectedImages: [UIImage]
+    @Binding var showPicker: Bool //switch back to bindings
+    @Binding var selectedImages: [UIImage] //switch back to bindings
+    
     var body: some View {
-        Button("Select Photos") {
+        Button(action: {
+            selectedImages.removeAll()
             showPicker.toggle()
-        }
+        }, label: {
+            Text("Add Images from Album")
+                .font(.headline)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+                .padding()
+                .padding(.horizontal, 20)
+                .background(
+                    Color.blue
+                        .cornerRadius(10)
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                )
+        })
         .sheet(isPresented: $showPicker) {
             PhotoPickerView(showPicker: $showPicker, selectedImages: $selectedImages)
         }
         
         if !selectedImages.isEmpty {
+            
             Text("Selected Photos:")
             ScrollView(.horizontal) {
                 HStack {
@@ -78,3 +94,11 @@ struct ShowLibrary: View {
         }
     }
 }
+
+//#Preview {
+//    ShowLibrary(showPicker: false, selectedImages: [
+//        UIImage(systemName: "square.grid.3x1.folder.fill.badge.plus")!,
+//        UIImage(systemName: "square.grid.3x1.folder.fill.badge.plus")!
+//    ])
+//}
+//

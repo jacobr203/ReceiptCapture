@@ -13,31 +13,36 @@ struct PhotoCommandView: View {
     
     var body: some View {
         Spacer()
-        HStack{
-            Button(action: {
-                //button code
-            }) {
-                Image(systemName: strCameraIcon)
-                    .accentColor(.black)
-                    .frame(width:40, height: 30)
-                    .font(.system(size: 40))
-                    .padding(.leading, 40)
-            }
-
-            Spacer()
-            Button(action: {
-                //button code
-            }) {
-                Image(systemName: strAlbumIcon)
-                    .accentColor(.black)
-                    .frame(width:40, height: 30)
-                    .font(.system(size: 40))
-                    .padding(.trailing, 40)
-            }
+            HStack{
+                ScanImgButton
+                Spacer()
+                PhotoAlbumButton
+            //.background(.blue)
         }
-        .frame(width: 400)
+        .frame(width: 400, height:70, alignment: .bottom)
+        .navigationBarHidden(true)
+    }
+    var ScanImgButton: some View {
+        NavigationLink(destination: RecFromAlbumView()) {
+            Image(systemName: strCameraIcon)
+                .foregroundColor(.white)
+                //.frame(width:40, height: 30)
+                .font(.system(size: 40))
+                .padding(.leading, 40)
+        }
+    }
+    
+    var PhotoAlbumButton: some View {
+        NavigationLink(destination: RecFromAlbumView()) {
+            Image(systemName: strAlbumIcon)
+                .foregroundColor(.white)
+                //.frame(width:40, height: 30)
+                .font(.system(size: 40))
+                .padding(.trailing, 40)
+        }
     }
 }
+
 
 #Preview {
     PhotoCommandView()

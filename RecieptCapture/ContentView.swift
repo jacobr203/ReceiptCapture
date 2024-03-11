@@ -8,29 +8,26 @@
 import SwiftUI
 import UIKit
 
-struct ReceiptCaptureApp: View {
-    @State var clrBackgroundColor = Color.gray
+struct ContentView: View {
+//    @State var clrBackgroundColor = Color.white
     
     var body: some View {
-        ZStack {
-            backgroundLayer
-            VStack{
-                DateView()
-                CalenderView()
-                PhotoCommandView()
+        NavigationView {
+            ZStack {
+//                backgroundLayer
+                VStack{
+                    DateView()
+                    CalenderView()
+                    PhotoCommandView()
+                }
             }
         }
     }
-    
-    var backgroundLayer: some View {
-        clrBackgroundColor
-        .edgesIgnoringSafeArea(.all)
-    }
+//    var backgroundLayer: some View {
+//        clrBackgroundColor
+//            .edgesIgnoringSafeArea(.all)
+//    }
 }
-
-
 #Preview {
-    
-    ReceiptCaptureApp()
-        
+    ContentView()
 }

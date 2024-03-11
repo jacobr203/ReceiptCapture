@@ -39,7 +39,7 @@ struct CameraView: View {
                 }
                 .padding()
                 .sheet(isPresented: $isShowingImagePicker) {
-                    ImagePicker(image: $image, isShown: $isShowingImagePicker)
+                    //ImagePicker(image: $image, isShown: $isShowingImagePicker) woops, i deleted this, i hope i don't need it
                     
                 }
             } else {
