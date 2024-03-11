@@ -52,3 +52,29 @@ struct PhotoPickerView: UIViewControllerRepresentable {
         }
     }
 }
+
+struct ShowLibrary: View {
+    @Binding var showPicker: Bool
+    @Binding var selectedImages: [UIImage]
+    var body: some View {
+        Button("Select Photos") {
+            showPicker.toggle()
+        }
+        .sheet(isPresented: $showPicker) {
+            PhotoPickerView(showPicker: $showPicker, selectedImages: $selectedImages)
+        }
+        
+        if !selectedImages.isEmpty {
+            Text("Selected Photos:")
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(selectedImages, id: \.self) { image in
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                    }
+                }
+            }
+        }
+    }
+}

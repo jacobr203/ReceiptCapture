@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "959C716C-328B-4049-A138-AF084CE2A79D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecieptCapture/Database/ImageModelContainer.swift"
@@ -85,47 +85,173 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F9C3FD1-1668-4027-8442-86C72E7A6148"
+            uuid = "B7ABC83B-AFF9-4269-BCEF-80B28BF17136"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RecieptCapture/ContentView.swift"
+            filePath = "RecieptCapture/CameraView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "CameraView"
+            landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "1F9C3FD1-1668-4027-8442-86C72E7A6148 - ed95966ae3317368"
+                  uuid = "B7ABC83B-AFF9-4269-BCEF-80B28BF17136 - bb0e842f4fc2a3ee"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RecieptCapture.ReceiptCaptureApp.body.getter : some"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExit() -&gt; ()"
                   moduleName = "RecieptCapture"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/ContentView.swift"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "260">
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "268">
                </Location>
                <Location
-                  uuid = "1F9C3FD1-1668-4027-8442-86C72E7A6148 - a5b5d6aad7833590"
+                  uuid = "B7ABC83B-AFF9-4269-BCEF-80B28BF17136 - bb0e842f4fc2a3ee"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.LazyVStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;RecieptCapture.ImageData&gt;, Foundation.UUID, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0)&gt;&gt; in RecieptCapture.ReceiptCaptureApp.body.getter : some"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExit() -&gt; ()"
                   moduleName = "RecieptCapture"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/ContentView.swift"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "260">
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "B7ABC83B-AFF9-4269-BCEF-80B28BF17136 - 2bad6bd4ad51d0f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExitCap() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "B7ABC83B-AFF9-4269-BCEF-80B28BF17136 - 2bad6bd4ad51d0f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExitCap() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40EFE003-FB53-43F3-80A4-6521656FB1D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecieptCapture/CameraView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "CameraView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "40EFE003-FB53-43F3-80A4-6521656FB1D0 - bb0e842f4fc2a3cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExit() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "672">
+               </Location>
+               <Location
+                  uuid = "40EFE003-FB53-43F3-80A4-6521656FB1D0 - 2bad6bd4ad51d0d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExitCap() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13D98D0C-4635-4E01-B0F6-77DDA5A620D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecieptCapture/CameraView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "CameraView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "13D98D0C-4635-4E01-B0F6-77DDA5A620D8 - bb0e842f4fc2ac2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExit() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "912">
+               </Location>
+               <Location
+                  uuid = "13D98D0C-4635-4E01-B0F6-77DDA5A620D8 - 2bad6bd4ad51df3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecieptCapture.CameraView.saveCleanExitCap() -&gt; ()"
+                  moduleName = "RecieptCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jacobrego/Desktop/Swift%20Projects/RecieptCapture/RecieptCapture/CameraView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "912">
                </Location>
             </Locations>
          </BreakpointContent>
