@@ -94,8 +94,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
-            landmarkName = "saveCleanExit()"
-            landmarkType = "7">
+            landmarkName = "CameraView"
+            landmarkType = "14">
             <Locations>
                <Location
                   uuid = "B7ABC83B-AFF9-4269-BCEF-80B28BF17136 - bb0e842f4fc2a3ee"
@@ -172,8 +172,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "saveCleanExit()"
-            landmarkType = "7">
+            landmarkName = "CameraView"
+            landmarkType = "14">
             <Locations>
                <Location
                   uuid = "40EFE003-FB53-43F3-80A4-6521656FB1D0 - bb0e842f4fc2a3cf"
@@ -220,8 +220,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "saveCleanExit()"
-            landmarkType = "7">
+            landmarkName = "CameraView"
+            landmarkType = "14">
             <Locations>
                <Location
                   uuid = "13D98D0C-4635-4E01-B0F6-77DDA5A620D8 - bb0e842f4fc2ac2c"
