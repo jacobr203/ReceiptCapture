@@ -9,81 +9,92 @@ import SwiftUI
 import UIKit
 
 struct ReceiptCaptureApp: View {
-    @State var isShown: Bool = false
-    @StateObject var imageViewModel = ImageViewModel()
-    @State var showPicker: Bool = false
-    @State var selectedImages: [UIImage] = []
+    @State var clrBackgroundColor = Color.gray
+    var strMenuIconName = "line.3.horizontal"
+    var strRightArrow = "arrow.right"
+    var strLeftArrow = "arrow.left"
+    var strManualReciept = "doc.fill.badge.ellipsis"
     
     var body: some View {
-        NavigationView {
-            VStack { //this is the Image Library from Photos
-                ShowLibrary(showPicker: $showPicker, selectedImages: $selectedImages)
-                    .onDisappear{
-                        saveCleanExit()
-                        //this is where you add the files to the directory and assign hash
-                    }
-                //This is the image library saved onto the app
-                List(imageViewModel.images) { imageData in
-                    Image(uiImage: FileManager.default.loadImage(fromURL: imageData.imageURL)!)
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                    //Text(imageData.name)
-                }
-                .onAppear {
-                    if let imageURLs = try? FileManager.default.contentsOfDirectory(at: FileManager.documentsDirectory, includingPropertiesForKeys: nil) {
-                        for imageURL in imageURLs {
-                            let imageName = imageURL.lastPathComponent
-                            let imageData = ImageData(name: imageName, imageURL: imageURL, hash: "123")
-                            imageViewModel.images.append(imageData)
-                        }
-                    }}
-                Text("Scan Image or Upload library")
-                    .onAppear {
-                    }
-                    .font(.headline)
-                //.fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .background(Color.blue) //
-                    .navigationTitle("Reciept Capture")
-                    .cornerRadius(10) // Apply corner radius to create a button shape
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10) // Overlay a rounded rectangle to add border
-                            .stroke(Color.blue, lineWidth: 2) // Set border color and width
-                    )
-                NavigationLink(destination:  CameraView(isShown: $isShown)) {
-                    Text("Take Picture")
-                }
+        ZStack {
+            backgroundLayer
+            VStack{
+                dateView
+                Spacer()
             }
         }
     }
-    private func saveCleanExit() {
-        if selectedImages.count > 0 {
-            for image in selectedImages {
-                let imageName = "ReceiptCapture." + UUID().uuidString
-                FileManager.default.saveImage(image, withName: imageName)
-            }
-        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var backgroundLayer: some View {
+        clrBackgroundColor
+        .edgesIgnoringSafeArea(.all)
     }
+    var dateView: some View {
+        HStack {
+            Button(action: {
+                // Button action code to open model
+            }) {
+                Image(systemName: strMenuIconName)
+                    .accentColor(.black)
+                    .frame(width:40, height: 30)
+                    .padding(.leading, 30)
+                    .font(.system(size: 20))
+            }
+           Spacer()
+            Button(action: {
+                // Button action code to open model
+            }) {
+                Image(systemName: strLeftArrow)
+                    .accentColor(.black)
+                    .frame(width:40, height: 30)
+                    .font(.system(size: 20))
+            }
+            Spacer()
+            Button(action: {
+                // Button action code to open model
+            }) {
+                Image(systemName: strRightArrow)
+                    .accentColor(.black)
+                    .frame(width:40, height: 30)
+                    .font(.system(size: 20))
+            }
+            Spacer()
+            Button(action: {
+                // Button action code to open model
+            }) {
+                Image(systemName: strManualReciept)
+                    .accentColor(.black)
+                    .frame(width:40, height: 30)
+                    .padding(.trailing, 30)
+                    .font(.system(size: 20))
+            }
+
+        }
+        .frame(width: 400, height: 50)
+        
+    }
+    
+    
+    
 }
-
-
-
-func recognizeText(from image: UIImage) {
-    // Use TesseractOCR to extract text from the image
-    // ...
-    // Update recognizedText state with extracted text
-}
-
-func categorizeReceipt(text: String) {
-    // Use TensorFlow Lite model to categorize the receipt text
-    // ...
-    // Update categories state with predicted categories
-}
-
 
 
 #Preview {
     
     ReceiptCaptureApp()
-        .modelContainer(for: Item.self, inMemory: true)
+        
 }

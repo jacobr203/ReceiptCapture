@@ -19,7 +19,7 @@ let dependencies = [
 struct ReceiptCaptureAppApp: App {
   var body: some Scene {
     WindowGroup {
-      ReceiptCaptureApp()
+        ReceiptCaptureApp()
     }
   }
     

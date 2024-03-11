@@ -50,24 +50,3 @@ class ImageViewModel: ObservableObject {
         }
     }
 }
-//
-// Example usage
-//struct ContentView: View {
-//    @StateObject var imageViewModel = ImageViewModel()
-//    
-//    var body: some View {
-//        VStack {
-//            Text("Images")
-//            List(imageViewModel.images) { imageData in
-//                Image(uiImage: FileManager.default.loadImage(fromURL: imageData.imageURL)!)
-//                    .resizable()
-//                    .frame(width: 100, height: 100)
-//                Text(imageData.name)
-//            }
-//            .onAppear {
-//                // Load existing images
-//                // You might want to implement this according to your app's logic
-//            }
-//        }
-//    }
-//}
