@@ -39,7 +39,7 @@ struct CameraView: View {
                 }
                 .padding()
                 .sheet(isPresented: $isShowingImagePicker) {
-                    //ImagePicker(image: $image, isShown: $isShowingImagePicker) woops, i deleted this, i hope i don't need it
+                    ImagePicker(image: $image, isShown: $isShowingImagePicker)
                     
                 }
             } else {
@@ -55,7 +55,7 @@ struct CameraView: View {
             checkCameraPermission()
         }
         .onDisappear {
-//            saveCleanExit()
+            //            saveCleanExit()
         }
     }
     
@@ -77,14 +77,4 @@ struct CameraView: View {
             }
         }
     }
-    
-//    private func saveCleanExit() {
-//        //save the image if it exists, clean the view so the image doesn't persist, exit
-//        if let image = image, isLive == true {
-//            let imageName = "ReceiptCapture."+UUID().uuidString
-//            FileManager.default.saveImage(image, withName: imageName) //Could probably remove the URL here...
-//        }
-//    }
-    
-    
 }

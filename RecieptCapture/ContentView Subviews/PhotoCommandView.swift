@@ -23,7 +23,7 @@ struct PhotoCommandView: View {
         .navigationBarHidden(true)
     }
     var ScanImgButton: some View {
-        NavigationLink(destination: RecFromAlbumView()) {
+        NavigationLink(destination: ScanImageView()) {
             Image(systemName: strCameraIcon)
                 .foregroundColor(.white)
                 //.frame(width:40, height: 30)

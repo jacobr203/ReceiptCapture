@@ -19,6 +19,7 @@
 		0BED15A02B9F660E0081D138 /* RecFromAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED159F2B9F660E0081D138 /* RecFromAlbumView.swift */; };
 		0BED15A32B9FBFAA0081D138 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED15A22B9FBFAA0081D138 /* DeleteButton.swift */; };
 		0BED15A52B9FD0880081D138 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED15A42B9FD0880081D138 /* ImagePicker.swift */; };
+		0BF0DD522BA0169C00383576 /* ScanImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0DD512BA0169C00383576 /* ScanImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0BED159F2B9F660E0081D138 /* RecFromAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecFromAlbumView.swift; sourceTree = "<group>"; };
 		0BED15A22B9FBFAA0081D138 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		0BED15A42B9FD0880081D138 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = "RecieptCapture/Helper Content/ImagePicker.swift"; sourceTree = SOURCE_ROOT; };
+		0BF0DD512BA0169C00383576 /* ScanImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				0B64CB6F2B8BC3F00089A87E /* RecieptCaptureApp.swift */,
 				0B64CB712B8BC3F00089A87E /* ContentView.swift */,
 				0BED159C2B9F52900081D138 /* ContentView Subviews */,
+				0BF0DD502BA0166D00383576 /* ScanImage */,
 				0BED159E2B9F65B20081D138 /* RecFromAlbum */,
 				0B3D09F72B91923A00449161 /* Helper Content */,
 				0B64CB752B8BC3F30089A87E /* Assets.xcassets */,
@@ -166,6 +169,14 @@
 			children = (
 			);
 			path = RecFromAlbumSubviews;
+			sourceTree = "<group>";
+		};
+		0BF0DD502BA0166D00383576 /* ScanImage */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0DD512BA0169C00383576 /* ScanImageView.swift */,
+			);
+			path = ScanImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 				0BED15992B9ECDA80081D138 /* DateView.swift in Sources */,
 				0B64CB702B8BC3F00089A87E /* RecieptCaptureApp.swift in Sources */,
 				0B11274B2B8BF71C005372C8 /* CameraView.swift in Sources */,
+				0BF0DD522BA0169C00383576 /* ScanImageView.swift in Sources */,
 				0BED15A32B9FBFAA0081D138 /* DeleteButton.swift in Sources */,
 				0BED15972B9E9E510081D138 /* CalenderView.swift in Sources */,
 				0BED15A52B9FD0880081D138 /* ImagePicker.swift in Sources */,
