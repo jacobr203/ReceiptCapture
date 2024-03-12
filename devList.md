@@ -2,10 +2,10 @@
 
 - [x]  Home Screen View
 - [x]  Receipts from Album View
-- [ ]  Scan Image View
+- [x]  Scan Image View
 - [ ]  Manual add View
 - [ ]  Manual remove View
-- [ ]  Date change model View
+- [ ]  Date change model View ????
 
 ## Home Screen Actions
 Default homescreen for application? (might change if user has data).
@@ -30,9 +30,10 @@ This screen allows users to choose receipts from their album. These receipts can
 - [ ]  *Optional also allows them to remove the receipt from the scroll view) (*optinally, allow users to view, verify and update subtotals on procesed receipts
 
 ## Scan Image Actions
-- [ ]  Button on homescreen navigates here.
-- [ ]  Navigate directly to the camera. 
-- [ ]  Camera should scan (like a qr code) a receipt and display an image of the receipt to the user once identified.
+- [x]  Button on homescreen navigates here.
+~~- [ ]  Navigate directly to the camera.~~ 
+- [ ]  OPTIONAL: Camera should scan (like a qr code) a receipt and display an image of the receipt to the user once identified.
+- [x]  Camera should take photo and display data of photo back to user.
 - [ ]  Once receipt is displayed, information on receipt should be processed and displayed to the user. (with options to manualy update)
 - [ ]  Button to add data into application and send user back to the home screen
       
