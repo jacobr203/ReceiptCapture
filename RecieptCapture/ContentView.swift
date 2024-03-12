@@ -9,12 +9,12 @@ import SwiftUI
 import UIKit
 
 struct ContentView: View {
-//    @State var clrBackgroundColor = Color.white
+//@State var clrBackgroundColor = Color.white
     
     var body: some View {
         NavigationView {
             ZStack {
-//                backgroundLayer
+               //backgroundLayer
                 VStack{
                     DateView()
                     CalenderView()
