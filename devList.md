@@ -1,7 +1,7 @@
 ## Screen Development Checklist (only includes style, design, and essential elements)
 
 - [x]  Home Screen View
-- [ ]  Receipts from Album View
+- [x]  Receipts from Album View
 - [ ]  Scan Image View
 - [ ]  Manual add View
 - [ ]  Manual remove View
@@ -21,12 +21,13 @@ Default homescreen for application? (might change if user has data).
 ## Receipts from Album View Actions
 This screen allows users to choose receipts from their album. These receipts can then be processed and inserted into local tables. Physical images should not be added.
 
-- [ ]  Button on homescreen navigates here.
-- [ ]  Button on this screen to popup the album navigator and choose photos.
+- [x]  Button on homescreen navigates here.
+- [x]  Button on this screen to popup the album navigator and choose photos.
 - [ ]  grab the unique photo library ID and populate images already selected from this app. (Store and re-reference the unique photo ID. Might want to tie this receipt to the photo ID)
-- [ ]  Button action should allow users to process receipts.
-  - [ ] Pressing this button should bring users back to the home screen once images have been processed.
-- [ ]  Horizontal scroll view should allow users to see all photos they've added. (*Optional also allows them to remove the receipt from the scroll view) (*optinally, allow users to view, verify and update subtotals on procesed receipts)
+- [ ]  Save button action should allow users to process receipts.
+  - [x] Pressing this button should bring users back to the home screen once images have been processed.
+- [x]  Horizontal scroll view should allow users to see all photos they've added.
+- [ ]  *Optional also allows them to remove the receipt from the scroll view) (*optinally, allow users to view, verify and update subtotals on procesed receipts
 
 ## Scan Image Actions
 - [ ]  Button on homescreen navigates here.
