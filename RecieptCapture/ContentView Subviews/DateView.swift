@@ -107,7 +107,7 @@ struct DateView: View {
 //    
 //}
 //
-//#Preview {
-//
-//    DateView(isSidebarVisible: $issideBar)
-//}
+#Preview {
+
+    DateView()
+}

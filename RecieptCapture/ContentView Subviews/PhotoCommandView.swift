@@ -11,6 +11,7 @@ struct PhotoCommandView: View {
     let strCameraIcon = "camera.circle"
     let strAlbumIcon = "book.circle"
     
+    
     var body: some View {
         Spacer()
             HStack{

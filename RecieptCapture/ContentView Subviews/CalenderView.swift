@@ -11,6 +11,7 @@ import SwiftUI
 struct CalenderView: View {
     private let calendar = Calendar.current
     @State private var currentDate = Date()
+    @EnvironmentObject var RecModel: ReceiptModel
     
     var body: some View {
         ScrollView {

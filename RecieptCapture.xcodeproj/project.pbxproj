@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B11274B2B8BF71C005372C8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11274A2B8BF71C005372C8 /* CameraView.swift */; };
+		0B1629932BA491B400AAEE9A /* Databases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1629922BA491B400AAEE9A /* Databases.swift */; };
+		0B1629962BA4924000AAEE9A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1629952BA4924000AAEE9A /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
+		0B1629982BA4D0D100AAEE9A /* tblReceipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1629972BA4D0D100AAEE9A /* tblReceipts.swift */; };
+		0B16299A2BA4D0E800AAEE9A /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1629992BA4D0E800AAEE9A /* ReceiptModel.swift */; };
 		0B3D09EB2B90543800449161 /* PhotoSelecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D09EA2B90543800449161 /* PhotoSelecter.swift */; };
 		0B64CB702B8BC3F00089A87E /* RecieptCaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB6F2B8BC3F00089A87E /* RecieptCaptureApp.swift */; };
 		0B64CB722B8BC3F00089A87E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64CB712B8BC3F00089A87E /* ContentView.swift */; };
@@ -41,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		0B11274A2B8BF71C005372C8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		0B1629922BA491B400AAEE9A /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
+		0B1629952BA4924000AAEE9A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		0B1629972BA4D0D100AAEE9A /* tblReceipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tblReceipts.swift; sourceTree = "<group>"; };
+		0B1629992BA4D0E800AAEE9A /* ReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
 		0B3D09EA2B90543800449161 /* PhotoSelecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelecter.swift; sourceTree = "<group>"; };
 		0B64CB6C2B8BC3F00089A87E /* RecieptCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecieptCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B64CB6F2B8BC3F00089A87E /* RecieptCaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptCaptureApp.swift; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1629962BA4924000AAEE9A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1629942BA4923F00AAEE9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B1629952BA4924000AAEE9A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0B3D09F72B91923A00449161 /* Helper Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +116,7 @@
 			children = (
 				0B64CB6E2B8BC3F00089A87E /* RecieptCapture */,
 				0B64CB6D2B8BC3F00089A87E /* Products */,
+				0B1629942BA4923F00AAEE9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +158,9 @@
 		0BBEA73A2B8D06E5004CA4DD /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				0B1629922BA491B400AAEE9A /* Databases.swift */,
+				0B1629972BA4D0D100AAEE9A /* tblReceipts.swift */,
+				0B1629992BA4D0E800AAEE9A /* ReceiptModel.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -311,10 +332,13 @@
 			files = (
 				0BED159B2B9F4D720081D138 /* PhotoCommandView.swift in Sources */,
 				0B64CB722B8BC3F00089A87E /* ContentView.swift in Sources */,
+				0B16299A2BA4D0E800AAEE9A /* ReceiptModel.swift in Sources */,
 				0BED15992B9ECDA80081D138 /* DateView.swift in Sources */,
 				0B64CB702B8BC3F00089A87E /* RecieptCaptureApp.swift in Sources */,
 				0B11274B2B8BF71C005372C8 /* CameraView.swift in Sources */,
 				0BF0DD522BA0169C00383576 /* ScanImageView.swift in Sources */,
+				0B1629932BA491B400AAEE9A /* Databases.swift in Sources */,
+				0B1629982BA4D0D100AAEE9A /* tblReceipts.swift in Sources */,
 				0BED15A32B9FBFAA0081D138 /* DeleteButton.swift in Sources */,
 				0BED15972B9E9E510081D138 /* CalenderView.swift in Sources */,
 				0BED15A52B9FD0880081D138 /* ImagePicker.swift in Sources */,

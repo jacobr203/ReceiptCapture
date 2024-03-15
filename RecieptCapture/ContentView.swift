@@ -11,28 +11,23 @@ import UIKit
 struct ContentView: View {
     //@State var clrBackgroundColor = Color.white
     @State var isSidebarVisible = false
+    @StateObject var RecModel =  ReceiptModel.init(db: openDatabase())
+    
     var body: some View {
         NavigationView {
             ZStack {
-                //backgroundLayer
                 VStack{
-                    DateView(/*isSidebarVisible: $isSidebarVisible*/)
-                    HStack(/*spacing: 0*/){
-                        //                        if isSidebarVisible {
-                        //                            Sidebar(isSidebarVisible: $isSidebarVisible)
-                        //                        }
+                    DateView()
+                    HStack(){
                         CalenderView()
+                        .environmentObject(RecModel)
                     }
                     PhotoCommandView()
                 }
             }
         }
     }
-    //    var backgroundLayer: some View {
-    //        clrBackgroundColor
-    //            .edgesIgnoringSafeArea(.all)
-    //    }
 }
 #Preview {
-    ContentView()
+    ContentView(RecModel: ReceiptModel(db: openDatabase()))
 }
