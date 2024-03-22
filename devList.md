@@ -51,4 +51,7 @@ This screen allows users to choose receipts from their album. These receipts can
 - [ ]  2 options, year and month
 - [ ]  toggle the Home Screen view to refelct new date
 
+## Future Features
+- [ ] Set up web sever to save images from users on the app. Send image to web server after processing receipt along with categories: (img, categories) -> after amassing an amount of receipts, create CNN to categorize receipt to category.
+
 
